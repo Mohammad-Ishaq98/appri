@@ -1,0 +1,74 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+
+}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .hero_area .hero_txt h1 {
+    padding-right: 0;
+    margin-top: 35px;
+  }
+  .hero_area .hero_txt p {
+    padding-right: 0;
+  }
+  .hero_area .app_shape2 {
+    right: 0%;
+  }
+}
+
+ 
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero_area {
+    min-height: 900px;
+  }
+  .hero_area .hero_txt h1 {
+    padding-right: 0;
+  }
+  .hero_area .hero_txt p {
+    padding-right: 0;
+  }
+  .hero_area .shp1 {
+    left: 56%;
+    top: 8%;
+  }
+  .counter::after {
+    height: 23px;
+    width: 2px;
+  }
+  .counter h1.counter_head {
+    font-size: 30px;
+  }
+  #unique header p {
+    font-size: 14px;
+  }
+  .subscribe_txt h3 {
+    font-size: 24px;
+  }
+  #subscribe .subscribe_area {
+    padding: 20px 25px;
+  }
+  #subscribe .subscribe_area .subscribe_form input {
+    padding: 12px 25px;
+  }
+  #subscribe .subscribe_area .subscribe_form button {
+    padding: 4px 30px;
+  }
+
+}
+
+ 
+/* small mobile :320px. */
+@media (max-width: 767px) {
+
+ 
+}
+ 
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px}
+ 
+}
