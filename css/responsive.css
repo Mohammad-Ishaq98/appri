@@ -22,6 +22,18 @@
  
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
+  .header .header_btn_a {
+    padding: 10px 14px;
+  }
+  .header .main_menu ul li a {
+    color: #eceff8;
+    padding: 5px 0;
+    font-size: 16px;
+    font-family: 'Roboto';
+  }
+  .mean-container a.meanmenu-reveal span {
+    background: #e6f5d180; 
+  }
   .hero_area {
     min-height: 900px;
   }
@@ -57,18 +69,311 @@
   #subscribe .subscribe_area .subscribe_form button {
     padding: 4px 30px;
   }
+  #unique header p {
+    width: 50%;
+  }
+  #video {
+    margin-top: -10px;
+  }
+  #phn_area .phn_area_header {
+    top: 419px;
+  }
+  #phn_area .phn_wrapper {
+    padding-top: 550px;
+    padding-bottom: 150px;
+  }
+  .faq_sec {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .latest_blog {
+    padding: 0 0;
+  }
+  #subscribe {
+    padding: 0 0;
+  }
+  
 
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px}
+  /* nav menu */
+  .mean-container a.meanmenu-reveal {
+    border: 1px solid #e6f5d180;
+    color: #e6f5d180;
+    border-radius: 4px;
+  }
+  .mean-container .mean-nav ul {
+    margin: 27px;
+  }
+  .mean-container .mean-nav ul li a {
+    border-top: 0px;
+  }
+  .header .main_menu ul li ul.sub_menu {
+    z-index: 999;
+  }
+  .header .main_menu ul li a:hover {
+    color: #fff;
+  }
+  .mean-container .mean-nav {
+    background: #8672e5 none repeat scroll 0px 0px;
+  }
+  .header .main_menu ul li ul.sub_menu {
+    background: #8672e5;
+    width: 33.3%;
+    top: 26%;
+    left: -28px;
+    border-top: 1px solid red;
+  }
+  .mean-container .mean-nav ul li a.mean-expand {
+    right: 7px;
+    border-style: solid solid solid solid;
+    border-width: 1px 1px 1px 1px;
+  }
+  .mean-container .mean-nav ul li li a {
+    border-top: none;
+  }
+  .mean-container .mean-nav ul {
+    padding-bottom: 85px;
+    position: relative;
+  }
+  .mean-container a.meanmenu-reveal span {
+    background: #e9e5e5 none repeat scroll 0 0;
+  }
+  .header .header_btn_a {
+    display: none;
+  }
+  .header_btn_a.\.header_btn_resposive {
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+    top: -66px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .phn_wrapper{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .hero_area {
+    min-height: 1090px;
+  }
+  .hero_txt {
+    margin-top: 100px;
+  }
+  .hero_area .hero_txt h1 {
+    padding-right: 0;
+  }
+  .hero_area .hero_txt p {
+    padding-right: 0;
+  }
+  .hero_img {
+    margin-top: -134px;
+    margin-left: 58px;
+  }
+  .hero_img img:first-child {
+    width: 257px;
+  }
+  .hero_img img {
+    width: 157px;
+  }
+  .hero_area .app_shape1 {
+    left: -16%;
+    top: 5%;
+  }
+  .hero_area .app_shape2 {
+    bottom: -1%;
+    right: 24%;
+    transform: rotate(65deg);
+  }
+  .counter::after {
+    display: none;
+  }
+  #unique {
+    padding: 10px 0;
+  }
+  #unique header p {
+    width: 100%;
+  }
+  #video {
+    margin-top: 0;
+  }
+  #phn_area .phn_wrapper {
+    padding-top: 583px;
+    padding-bottom: 50px;
+  }
+  .vdo_wrapper img {
+    height: 420px;
+  }
+  .vdo_cntnt h1 {
+    font-size: 38px;
+  }
+  #screenShots .header_screenShots p {
+    width: 100%;
+  }
+  #screenShots {
+    padding-bottom: 0;
+  }
+  .faq_sec {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+  .pb-150 {
+    padding-bottom: 15px;
+  }
+  .pt-150 {
+    padding-top: 15px;
+  }
+  .subscribe_txt {
+    text-align: center;
+  }
+  #download {
+    padding-top: 50px;
+  }
 }
 
  
 /* small mobile :320px. */
 @media (max-width: 767px) {
+  /* nav css start */
 
- 
-}
- 
-/* Large Mobile :480px. */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-.container {width:450px}
- 
+  .mean-container a.meanmenu-reveal {
+    border: 1px solid #e6f5d180;
+    color: #e6f5d180;
+    border-radius: 4px;
+  }
+  .mean-container .mean-nav ul {
+    margin: 27px;
+  }
+  .mean-container .mean-nav ul li a {
+    border-top: 0px;
+  }
+  .header .main_menu ul li ul.sub_menu {
+    z-index: 999;
+  }
+  .header .main_menu ul li a:hover {
+    color: #fff;
+  }
+  .mean-container .mean-nav {
+    background: #8672e5 none repeat scroll 0px 0px;
+  }
+  .header .main_menu ul li ul.sub_menu {
+    background: #8672e5;
+    width: 33.3%;
+    top: 26%;
+    left: -28px;
+    border-top: 1px solid red;
+  }
+  .mean-container .mean-nav ul li a.mean-expand {
+    right: 7px;
+    border-style: solid solid solid solid;
+    border-width: 1px 1px 1px 1px;
+  }
+  .mean-container .mean-nav ul li li a {
+    border-top: none;
+  }
+  .mean-container .mean-nav ul {
+    padding-bottom: 85px;
+    position: relative;
+  }
+  .mean-container a.meanmenu-reveal span {
+    background: #e9e5e5 none repeat scroll 0 0;
+  }
+  .header .header_btn_a {
+    display: none;
+  }
+  .header_btn_a.\.header_btn_resposive {
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+    top: -66px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  
+  /* nav css end */
+
+  .hero_area .hero_txt h1 {
+    padding-right: 0;
+    margin-top: 90px;
+    font-size: 32px;
+  }
+  .hero_area .hero_txt p {
+    padding-right: 0;
+    line-height: 1.2;
+  }
+  .shape_imges {
+    display: none;
+  }
+  .shape_imges {
+    display: none;
+  }
+  .hero_img {
+    margin-top: -100px;
+    margin-left: 83px;
+  }
+  .hero_img img {
+    width: 78%;
+  }
+  .hero_area .app_shape2 {
+    right: 8%;
+  }
+  .counter::after {
+    display: none;
+  }
+  #unique header h1 {
+    font-size: 40px;
+    font-weight: 300;
+  }
+  #unique header p {
+    width: 100%;
+  }
+  .vdo_wrapper {
+    margin-top: 100px;
+  }
+  .vdo_cntnt h1 {
+    font-size: 20px;
+  }
+  #video .vdo_wrapper .vdo_cntnt {
+    top: 45%;
+  }
+  #video .vdo_wrapper .vdo_cntnt a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .vdo_wrapper img {
+    height: 333px;
+  }
+  #screenShots .header_screenShots p {
+    font-size: 18px;
+    width: 100%;
+  }
+  #phn_area .phn_area_header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 313px;
+  }
+  #phn_area .phn_wrapper {
+    padding-top: 453px;
+    padding-bottom: 176px;
+  }
+  .faq_sec {
+    padding-top: 0;
+  }
+  .pb-100 {
+    padding-bottom: 50px;
+  }
+  .owl-carousel .owl-stage::after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+    width: 100%;
+  }
 }

@@ -1,9 +1,14 @@
 (function ($) {
 "use strict";
+//preloader
+$(window).on('load', function() {
+	$('.preload_body').delay(1000).fadeOut(1000);
+})
+
 
 // meanmenu
 $('#mobile-menu').meanmenu({
-	meanMenuContainer: '.mobile-menu',
+	meanMenuContainer: '.main-menu',
 	meanScreenWidth: "767"
 });
 
@@ -13,6 +18,11 @@ $('.main-menu nav ul').onePageNav({
 	currentClass: 'active',
 	scrollOffset: top_offset,
 });
+jQuery('.main-menu nav ul').superfish();
+//meanmenu btn when viewport is 767px
+$('.meanmenu-reveal').on('click', function() {
+	$('.header_btn_a').toggleClass('.header_btn_resposive')
+})
 
 
 $(window).on('scroll', function () {
@@ -23,8 +33,6 @@ $(window).on('scroll', function () {
 		$(".header-sticky").addClass("sticky");
 	}
 });
-
-
 
 // mainSlider
 function mainSlider() {
@@ -69,7 +77,7 @@ mainSlider();
 // data background
 $("[data-background]").each(function(){
 	$(this).css("background-image", "url(" + $(this).attr("data-background") + ")");
-})
+});
 // $("[data-contain]").each(function(){
 // 	$(this).css("background-contain", $(this).attr("data-contain"));
 // })
@@ -150,11 +158,11 @@ $('.counter_head').counterUp({
 $.scrollUp({
 	scrollName: 'scrollUp', // Element ID
 	topDistance: '300', // Distance from top before showing element (px)
-	topSpeed: 700, // Speed back to top (ms)
-	animation: 'fade', // Fade, slide, none
-	animationInSpeed: 700, // Animation in speed (ms)
-	animationOutSpeed: 700, // Animation out speed (ms)
-	scrollText: '<i class="icofont icofont-long-arrow-up"></i>', // Text for element
+	topSpeed: 1700, // Speed back to top (ms)
+	animation: 'slide', // Fade, slide, none
+	animationInSpeed: 1700, // Animation in speed (ms)
+	animationOutSpeed: 1700, // Animation out speed (ms)
+	scrollText: '<i class="fa fa-arrow-up"></i>', // Text for element
 	activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
 });
 //slick slider
@@ -172,6 +180,7 @@ $('.testimonial_img').slick({
   dots: false,
   centerMode: true,
   focusOnSelect: true,
+	arrows: false,
 	centerPadding: '0px',
 });
 //owl carousel
@@ -181,7 +190,8 @@ $('.brand_logo').owlCarousel({
 	nav:false,
 	responsive:{
 			0:{
-					items:1
+					items:1,
+					margin:4,
 			},
 			600:{
 					items:3
