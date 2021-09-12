@@ -350,7 +350,7 @@ label {
 									margin-right: 33px;
 							}
 							& a{
-									font-size: 14px;
+									font-size: 20px;
 									text-transform: capitalize;
 									color: red;
 									font-weight: 500;
@@ -364,7 +364,7 @@ label {
 											padding-right: 15px;
 											&::after{
 													position: absolute;
-													content: '\f107';
+													//content: '\f107';
 													right: 0;	
 													font-size: 14px;
 													color: #000;

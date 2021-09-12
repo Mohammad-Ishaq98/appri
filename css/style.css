@@ -310,7 +310,7 @@ label {
     .header .main-menu ul li:not(:last-child) {
       margin-right: 33px; }
     .header .main-menu ul li a {
-      font-size: 14px;
+      font-size: px;
       text-transform: capitalize;
       color: red;
       font-weight: 500;
@@ -322,7 +322,6 @@ label {
       padding-right: 15px; }
       .header .main-menu ul li.has-dropdown > a::after {
         position: absolute;
-        content: '\f107';
         right: 0;
         font-size: 14px;
         color: #000; }
