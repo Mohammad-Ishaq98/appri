@@ -236,7 +236,7 @@ label {
 
 /* scrollUp */
 #scrollUp {
-	background: #653ff12c;
+	background: #3210ad2c;
 	height: 35px;
 	width: 35px;
 	right: 50px;
@@ -325,9 +325,34 @@ label {
 @mixin temBtnHovr {
 	background: linear-gradient(to left,#e54040 #d3cacf);
 }
+.people-opacity {
+	background: #fff;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	height: 100%;
+	width: 100%;
+	transition: .3s;
+	position: absolute;
+}
 
+center {
+	margin: 40px 0;
 
-
+	& .time-count {
+    display: inline-block;
+    margin-left: 50px;
+    color: #0a07c0;
+    font-size: 25px;
+    }
+}
+.sticky {
+	position: fixed;
+	left: 0;
+	right: 0;
+	background: #18e2e3;
+	padding: 5px 0;
+}
 // header css start
 .header_transparent{
 	position: absolute;
@@ -339,7 +364,7 @@ label {
 
 		.header_btn_a{
 			@include temBtn();
-			color: #eceff8;
+			color: #97a6d4;
 		}
 		.main-menu{
 			& ul{
@@ -350,13 +375,12 @@ label {
 									margin-right: 33px;
 							}
 							& a{
-									font-size: 20px;
+									font-size: 21px;
 									text-transform: capitalize;
-									color: red;
+									color: #fff;
 									font-weight: 500;
 									display: inline-block;
 									padding: 20px 0;
-									padding-bottom: 28px;
 							}
 							&.has-dropdown{
 									& > a{
@@ -373,17 +397,17 @@ label {
 							}
 							&.active{
 									& > a{
-											color: blue;
+											color: #c2c2ff;
 											&::after{
-													color: rgb(42, 42, 221);
+													color: #c2c2ff;
 											}
 									}
 							}
 							&:hover{
 									& > a{
-											color: blue;
+											color: #c2c2ff;
 											&::after{
-													color: blue;
+													color: #c2c2ff;
 											}
 									}
 									& .submenu{

@@ -8,9 +8,16 @@ $(window).on('load', function() {
 
 // meanmenu
 $('#mobile-menu').meanmenu({
-	meanMenuContainer: '.main-menu',
-	meanScreenWidth: "767"
+	meanMenuContainer: '.mobile-menu',
+	meanScreenWidth: "992"
 });
+
+
+//meanmenu btn when viewport is 767px
+// $('.meanmenu-reveal').on('click', function() {
+// 	$('.header_btn_a').toggleClass('.header_btn_resposive')
+// })
+
 
 // One Page Nav
 var top_offset = $('.header-area').height() - 10;
@@ -18,12 +25,6 @@ $('.main-menu nav ul').onePageNav({
 	currentClass: 'active',
 	scrollOffset: top_offset,
 });
-jQuery('.main-menu nav ul').superfish();
-//meanmenu btn when viewport is 767px
-$('.meanmenu-reveal').on('click', function() {
-	$('.header_btn_a').toggleClass('.header_btn_resposive')
-})
-
 
 $(window).on('scroll', function () {
 	var scroll = $(window).scrollTop();
@@ -33,6 +34,16 @@ $(window).on('scroll', function () {
 		$(".header-sticky").addClass("sticky");
 	}
 });
+
+//scrolling opacity
+// var animation_start_pos = 1000, animation_end_pos = 2000; //where you want the animation to stop
+
+// $(document).scroll(function() {
+//     var scroll_pos = $(this).scrollTop(); 
+//         var percentScrolled = parseFloat(scroll_pos/animation_end_pos);
+//         jQuery('.people-opacity').css('opacity',  percentScrolled );
+// });
+
 
 // mainSlider
 function mainSlider() {
@@ -74,43 +85,14 @@ function mainSlider() {
 }
 mainSlider();
 
+
 // data background
 $("[data-background]").each(function(){
 	$(this).css("background-image", "url(" + $(this).attr("data-background") + ")");
 });
-// $("[data-contain]").each(function(){
-// 	$(this).css("background-contain", $(this).attr("data-contain"));
-// })
-
-// owlCarousel
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:0,
-	items:1,
-	//navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-    nav:false,
-	dots:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        767:{
-            items:2
-        },
-        992:{
-            items:3
-        }
-    }
-})
-
 
 /* magnificPopup img view */
-$('.popup-image').magnificPopup({
-	type: 'image',
-	gallery: {
-	  enabled: true
-	}
-});
+
 
 /* magnificPopup video view */
 $(document).ready(function(){
@@ -152,6 +134,33 @@ $('.portfolio-menu button').on('click', function(event) {
 $('.counter_head').counterUp({
 	delay: 100,
 	time: 2000
+});
+
+//elevaty js
+$("#zoom_01").elevateZoom(); 
+$("#zoom_02").elevateZoom(); 
+$("#zoom_03").elevateZoom({
+	zoomWindowPosition: 10
+}); 
+$("#zoom_04").elevateZoom({
+	zoomWindowPosition:10
+});
+ 
+ $("#z03").elevateZoom({
+	zoomWindowPosition:1
+});
+
+
+
+//yt player
+jQuery("#bgndVideo").YTPlayer();
+
+// countdown
+$('[data-countdown]').each(function () {
+	var $this = $(this), finalDate = $(this).data('countdown');
+	$this.countdown(finalDate, function (event) {
+		$this.html(event.strftime('<div class="time-count">%D <span>days</span></div><div class="time-count">%H <span>hour</span></div><div class="time-count">%M <span>minute</span></div><div class="time-count">%S <span>Second</span></div>'));
+	});
 });
 
 // scrollToTop
@@ -203,6 +212,201 @@ $('.brand_logo').owlCarousel({
 })
 // WOW active
 new WOW().init();
+// maps
+
+function basicmap() {
+
+	// Basic options for a simple Google Map
+
+	// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+
+	var mapOptions = {
+
+		// How zoomed in you want the map to start at (always required)
+
+		zoom: 11,
+
+		scrollwheel: false,
+
+		// The latitude and longitude to center the map (always required)
+
+		center: new google.maps.LatLng(27.759597802019293, -82.65111933855246), // New York
+
+		// This is where you would paste any style found on Snazzy Maps.
+
+		styles:[
+			{
+					"featureType": "all",
+					"elementType": "labels.text.fill",
+					"stylers": [
+							{
+									"color": "#ffffff"
+							}
+					]
+			},
+			{
+					"featureType": "all",
+					"elementType": "labels.text.stroke",
+					"stylers": [
+							{
+									"color": "#000000"
+							},
+							{
+									"lightness": 13
+							}
+					]
+			},
+			{
+					"featureType": "administrative",
+					"elementType": "geometry.fill",
+					"stylers": [
+							{
+									"color": "#000000"
+							}
+					]
+			},
+			{
+					"featureType": "administrative",
+					"elementType": "geometry.stroke",
+					"stylers": [
+							{
+									"color": "#144b53"
+							},
+							{
+									"lightness": 14
+							},
+							{
+									"weight": 1.4
+							}
+					]
+			},
+			{
+					"featureType": "landscape",
+					"elementType": "all",
+					"stylers": [
+							{
+									"color": "#08304b"
+							}
+					]
+			},
+			{
+					"featureType": "poi",
+					"elementType": "geometry",
+					"stylers": [
+							{
+									"color": "#0c4152"
+							},
+							{
+									"lightness": 5
+							}
+					]
+			},
+			{
+					"featureType": "road.highway",
+					"elementType": "geometry.fill",
+					"stylers": [
+							{
+									"color": "#000000"
+							}
+					]
+			},
+			{
+					"featureType": "road.highway",
+					"elementType": "geometry.stroke",
+					"stylers": [
+							{
+									"color": "#0b434f"
+							},
+							{
+									"lightness": 25
+							}
+					]
+			},
+			{
+					"featureType": "road.arterial",
+					"elementType": "geometry.fill",
+					"stylers": [
+							{
+									"color": "#000000"
+							}
+					]
+			},
+			{
+					"featureType": "road.arterial",
+					"elementType": "geometry.stroke",
+					"stylers": [
+							{
+									"color": "#0b3d51"
+							},
+							{
+									"lightness": 16
+							}
+					]
+			},
+			{
+					"featureType": "road.local",
+					"elementType": "geometry",
+					"stylers": [
+							{
+									"color": "#000000"
+							}
+					]
+			},
+			{
+					"featureType": "transit",
+					"elementType": "all",
+					"stylers": [
+							{
+									"color": "#146474"
+							}
+					]
+			},
+			{
+					"featureType": "water",
+					"elementType": "all",
+					"stylers": [
+							{
+									"color": "#021019"
+							}
+					]
+			}
+	]
+
+	};
+
+	// Get the HTML DOM element that will contain your map
+
+	// We are using a div with id="map" seen below in the <body>
+
+	var mapElement = document.getElementById('contact-map');
+
+
+
+	// Create the Google Map using our element and options defined above
+
+	var map = new google.maps.Map(mapElement, mapOptions);
+
+
+
+	// Let's also add a marker while we're at it
+
+	var marker = new google.maps.Marker({
+
+		position: new google.maps.LatLng(27.759597802019293, -82.65111933855246),
+
+		map: map,
+
+		title: 'Cryptox'
+
+	});
+
+}
+
+if ($('#contact-map').length != 0) {
+
+	google.maps.event.addDomListener(window, 'load', basicmap);
+
+}
 
 
 })(jQuery);

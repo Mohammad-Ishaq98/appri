@@ -11,6 +11,13 @@
     padding-right: 0;
     margin-top: 35px;
   }
+  .header .main-menu ul li:not(:last-child) {
+    margin-right: 13px;
+}
+.header .main-menu ul li a {
+  font-size: 18px;
+  padding: 14px 0;
+}
   .hero_area .hero_txt p {
     padding-right: 0;
   }
